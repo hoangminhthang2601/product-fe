@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Build') {
+            steps {
+                sh "bash $WORKING_DIR/jenkins/scripts/fe_product_build.sh"
+            }
+        }
+
+        stage('Push') {
+            steps {
+                sh "bash $WORKING_DIR/jenkins/scripts/fe_product_push.sh"
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh "bash $WORKING_DIR/jenkins/scripts/fe_product_deploy.sh"
+            }
+        }
+
+    }
+}

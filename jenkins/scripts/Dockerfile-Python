@@ -1,0 +1,19 @@
+FROM python:3.9-slim
+
+ENV PYTHONUNBUFFERED=1
+
+
+COPY ./build_fe_product/src /app
+
+COPY ./build_fe_product/tests/ /app/tests
+
+WORKDIR /app
+
+ARG DEV=false
+
+
+ 
+
+
+ENV PATH="/py/bin:$PATH"
+
