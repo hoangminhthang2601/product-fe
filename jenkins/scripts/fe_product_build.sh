@@ -6,7 +6,7 @@ set -e
     echo "### Get the latest version in dev branch###"
 
 
-    cd $WORKING_DIR/jenkins/repos/CCTIV_FE
+    cd $WORKING_DIR/jenkins
 
     echo "### pull repo ###"
     git config pull.rebase false && \
